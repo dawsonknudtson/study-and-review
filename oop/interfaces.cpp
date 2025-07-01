@@ -1,4 +1,5 @@
 #include <iostream>
+using namespace std;
 
 class IAnimal {
 public:
@@ -9,13 +10,13 @@ public:
 class Dog : public IAnimal {
 public:
     void makeSound() override {
-        std::cout << "Woof" << std::endl;
+        cout << "Woof" << std::endl;
     }
 };
 
 class Cat : public IAnimal {
 public:
     void makeSound() override {
-        std::cout << "Meow" << std::endl;
+        cout << "Meow" << std::endl;
     }
 };
