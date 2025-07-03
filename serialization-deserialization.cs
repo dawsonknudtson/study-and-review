@@ -22,6 +22,11 @@ namespace SerializationDeserialization {
             
             Console.WriteLine(jsonString);
             Console.WriteLine(File.ReadAllText(fileName));
+
+            var weatherForecastDeserialized = JsonSerializer.Deserialize<WeatherForecast>(File.ReadAllText(fileName));
+            Console.WriteLine(weatherForecastDeserialized.Date);
+            Console.WriteLine(weatherForecastDeserialized.TemperatureC);
+            Console.WriteLine(weatherForecastDeserialized.Summary);
         }
     }
 }
